@@ -13,7 +13,7 @@ export const Hero = () => {
           </h1>
           <p className="hero-quote">
             Don't have time to read books then watch books summary only on{" "}
-            <span className="highlight-text">vFrame</span>.
+            <span className="highlight-text">SimplyTube</span>.
           </p>
           <Link to="/videolist">
             <button className="btn is-solid fs-lg bd-3 mg-vrtl-xlg">
