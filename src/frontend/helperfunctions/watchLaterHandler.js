@@ -64,7 +64,7 @@ export const deleteWatchLaterHandler = async (
       });
     }
   } catch (error) {
-    watchLaterDispatch({
+    dataStoreDispatch({
       type: actionTypes.API_ERROR,
       payload: "API is not working.",
     });
