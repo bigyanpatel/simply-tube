@@ -30,13 +30,14 @@ export const loginHandler = async (authDispatch, setIsLoggedIn, navigate) => {
     }
   } catch (error) {
     authDispatch({
-        type: actionTypes.API_ERROR,
-        payload: "API is not working",
+      type: actionTypes.API_ERROR,
+      payload: "API is not working",
     });
   }
 };
 
-export const logoutHandler = (setIsLoggedIn) => {
+export const logoutHandler = (setIsLoggedIn, navigate) => {
   localStorage.removeItem("loginToken");
   setIsLoggedIn(false);
+  navigate("/videolist");
 };
