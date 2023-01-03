@@ -1,6 +1,6 @@
 import "./App.css";
 import { Approute, Navbar } from "./frontend/components/componentExport";
-import { Loader } from "./frontend/components/loader/Loader";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
