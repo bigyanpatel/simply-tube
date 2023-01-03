@@ -1,20 +1,23 @@
+.video-main{
+  margin-top: 2rem;
+}
 .video-area {
-    display: grid;
-    gap: 2rem;
-    justify-content: center;
-    margin: 0 auto;
-    grid-template-columns: minmax(0,40rem) minmax(0,20rem);
+  display: grid;
+  gap: 2rem 0;
+  justify-content: center;
+  margin: 0 auto;
+  grid-template-columns: minmax(0,40rem) minmax(0,20rem);
+}
+.video {
+  height: 23rem;
+}
+
+@media screen and (max-width: 900px) {
+  .video-area {
+    grid-template-columns: 1fr;
+    margin: 1rem 0;
   }
   .video {
-    height: 23rem;
+    height: 16rem;
   }
-  
-  @media screen and (max-width: 900px) {
-    .video-area {
-      grid-template-columns: 1fr;
-      margin: 1rem;
-    }
-    .video {
-      height: 16rem;
-    }
-  }
+}
