@@ -57,7 +57,6 @@ export const deleteWatchLaterHandler = async (
   try {
     const res = await deleteWatchLaterService(token, videoId);
     if (res.status === 200) {
-      console.log(res.data.watchlater);
       dataStoreDispatch({
         type: actionTypes.WATCH_LATER,
         payload: res.data.watchlater,
