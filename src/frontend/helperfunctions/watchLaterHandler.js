@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { actionTypes } from "../reducers/actionTypes";
 import {
   deleteWatchLaterService,
@@ -8,7 +9,6 @@ import {
 export const getWatchLaterHandler = async (token, watchLaterDispatch) => {
   try {
     const res = await getWatchLaterService(token);
-    console.log(res);
     watchLaterDispatch({
       type: actionTypes.WATCH_LATER,
       payload: res.data.watchlater,
@@ -25,7 +25,8 @@ export const postWatchLaterHandler = async (
   token,
   videoItem,
   dataStoreDispatch,
-  navigate
+  navigate,
+  toastProps
 ) => {
   if (!token) {
     navigate("/login");
@@ -34,11 +35,11 @@ export const postWatchLaterHandler = async (
     try {
       const res = await postWatchLaterService(token, videoItem);
       if (res.status === 201) {
-        console.log(res.data.watchlater);
         dataStoreDispatch({
           type: actionTypes.WATCH_LATER,
           payload: res.data.watchlater,
         });
+        toast.success("Saved to Watch Later", toastProps);
       }
     } catch (error) {
       dataStoreDispatch({
@@ -52,7 +53,10 @@ export const postWatchLaterHandler = async (
 export const deleteWatchLaterHandler = async (
   token,
   videoId,
-  dataStoreDispatch
+  dataStoreDispatch,
+  skip1,
+  skip2,
+  toastProps
 ) => {
   try {
     const res = await deleteWatchLaterService(token, videoId);
@@ -61,6 +65,7 @@ export const deleteWatchLaterHandler = async (
         type: actionTypes.WATCH_LATER,
         payload: res.data.watchlater,
       });
+      toast("Removed from Watch Later", toastProps);
     }
   } catch (error) {
     dataStoreDispatch({
