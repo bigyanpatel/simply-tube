@@ -15,7 +15,10 @@ export const LoginPage = () => {
   const { passwordToggle, checkPasswordView } = useTogglePassword();
   const { toastProps } = useDataStore();
   const location = useLocation();
-
+  const guestUser = {
+    email: "adarshbalika",
+    password: "adarshBalika123",
+  };
 
   return (
     <>
@@ -26,6 +29,7 @@ export const LoginPage = () => {
             onSubmit={(e) => {
               e.preventDefault();
               loginHandler(
+                loginData,
                 authDispatch,
                 navigate,
                 toastProps,
@@ -80,7 +84,19 @@ export const LoginPage = () => {
             </div>
             
             <div className="btn-area">
-              <button className="btn is-secondary">
+              <button className="btn is-secondary"
+                onClick={() =>
+                  loginHandler(
+                    guestUser,
+                    authDispatch,
+                    navigate,
+                    toastProps,
+                    setToken,
+                    setCurrentUser,
+                    location
+                  )
+                  }
+              >
                 Login With Test Credentials.
               </button>
               <button className="btn is-solid">Login</button>

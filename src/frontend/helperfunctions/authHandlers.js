@@ -3,6 +3,7 @@ import { actionTypes } from "../reducers/actionTypes";
 import { loginService, signUpservice } from "../services/authService";
 
 export const loginHandler = async (
+  loginData,
   authDispatch,
   navigate,
   toastProps,
@@ -10,15 +11,17 @@ export const loginHandler = async (
   setCurrentUser,
   location
 ) => {
-  authDispatch({
-    type: actionTypes.SET_DUMMY_DATA,
-    payload: {
-      email: "adarshbalika@gmail.com",
-      password: "adarshBalika123",
-    },
-  });
+  if(loginData.email == 'adarshbalika'){
+    authDispatch({
+      type: actionTypes.SET_DUMMY_DATA,
+      payload: {
+        email: "adarshbalika@gmail.com",
+        password: "adarshBalika123",
+      },
+    });
+  }
   try {
-    const res = await loginService();
+    const res = await loginService(loginData);
     if (res.status === 200) {
       localStorage.setItem(
         "loginToken",
