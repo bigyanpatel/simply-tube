@@ -13,8 +13,8 @@ export const loginHandler = async (
   authDispatch({
     type: actionTypes.SET_DUMMY_DATA,
     payload: {
-      email: "gopal123@gmail.com",
-      password: "Gopal@123",
+      email: "adarshbalika@gmail.com",
+      password: "adarshBalika123",
     },
   });
   try {
