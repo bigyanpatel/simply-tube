@@ -73,10 +73,9 @@ SimplyTube is a video library for summary of **books**.
 <a name="images"/>
 
 #### Images
-![image](https://user-images.githubusercontent.com/75557011/162364268-745f0744-df11-4f9e-bb4d-b6409a6f8875.png)
-![image](https://user-images.githubusercontent.com/75557011/162364300-35ed33c7-0d4e-47d5-948a-5427d473c845.png)
-![image](https://user-images.githubusercontent.com/75557011/162364357-41e7f038-45f9-4e6a-bd35-6712ab2a2d25.png)
-
+![image](https://user-images.githubusercontent.com/86798277/212818089-d832cc08-aa00-4040-8652-3fd7f2bf7298.png)
+![image](https://user-images.githubusercontent.com/86798277/212818150-96e46a45-bf5b-4513-9d06-1196b63ea899.png)
+![image](https://user-images.githubusercontent.com/86798277/212818213-fcdbe284-cb65-4e5b-a243-07ae1dfc553d.png)
 
 ***
 <a name="link"/>
@@ -103,7 +102,7 @@ SimplyTube is a video library for summary of **books**.
 <a name="introduction"/>
 
 #### Introduction
-* Hey developers, I'm Bigyan, passionate Frontend Developer. Check out my [Portfolio](https://bigyanpatel.netlify.app/)
+* Hey developers, I'm Bigyan, passionate Frontend Developer. Check out my [Portfolio](https://bigyanpatel.vercel.app/)
 
 <a name="social-media"/>
 
